@@ -29,9 +29,9 @@ function App() {
       <div className="glitch-text">
         <div className="container">
           <div className="stack" style={{ "--stacks": 3 }}>
-            <span style={{ "--index": 0 }}>COMING SOON</span>
-            <span style={{ "--index": 1 }}>COMING SOON</span>
-            <span style={{ "--index": 2 }}>COMING SOON</span>
+            <span style={{ "--index": 0 }}>COMING SOON...</span>
+            <span style={{ "--index": 1 }}>COMING SOON...</span>
+            <span style={{ "--index": 2 }}>COMING SOON...</span>
           </div>
         </div>
       </div>

@@ -12,17 +12,19 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+    animation: revealText 1s ease-in-out forwards 2s;
 }
 
 .rotating-circle {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100px;
-    height: 100px;
-    animation: rotate 6s linear infinite;
+    width: 120px;
+    height: 120px;
+    animation: rotate 12s linear infinite;
 }
 
 .rotating-circle img {
@@ -35,8 +37,8 @@
     position: absolute;
     top: 25%;
     left: 25%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 .inner-logo img {
@@ -49,7 +51,9 @@
     position: absolute;
     top: 40px;
     right: 30px;
-    height: 70px;
+    height: 80px;
+    opacity: 0;
+    animation: revealText 1s ease-in-out forwards 2s;
 }
 
 .top-right-image img {
@@ -109,10 +113,14 @@
 }
 
 @keyframes fade {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0;
     }
-    33%, 66% {
+
+    33%,
+    66% {
         opacity: 1;
     }
 }
@@ -120,7 +128,7 @@
 .glitch-text {
     text-align: center;
     opacity: 0;
-    animation: revealText 1s ease-in-out forwards 2s;
+    animation: revealText 3s ease-in-out forwards 2s;
 }
 
 .container {
@@ -128,7 +136,7 @@
     font-weight: 600;
     letter-spacing: 5px;
     color: #dfdfdf;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     display: flex;
     flex-direction: column;
 }
@@ -165,15 +173,18 @@
         transform: translateX(-50%);
         text-shadow: -4px 6px 0 red, 4px -6px 0 blue;
     }
+
     60% {
         opacity: 0.5;
         transform: translateX(50%);
     }
+
     80% {
         transform: none;
         opacity: 1;
         text-shadow: 4px -6px 0 red, -4px 6px 0 blue;
     }
+
     100% {
         text-shadow: none;
     }
@@ -184,10 +195,13 @@
         text-shadow: -4px 6px 0 red, 4px -6px 0 blue;
         transform: translate(var(--glitch-translate));
     }
+
     5% {
         text-shadow: 4px -6px 0 red, -4px 6px 0 blue;
     }
-    10%, 100% {
+
+    10%,
+    100% {
         text-shadow: none;
         transform: none;
     }
@@ -197,6 +211,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -206,16 +221,21 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
 
 @keyframes fade {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0;
     }
-    33%, 66% {
+
+    33%,
+    66% {
         opacity: 1;
     }
 }
@@ -224,6 +244,7 @@
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }

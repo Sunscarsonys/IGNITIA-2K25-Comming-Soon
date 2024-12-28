@@ -50,9 +50,7 @@ function App() {
       {isModalOpen && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={closeModal}>
-              &times;
-            </button>
+            <h2 className="modal-heading">Modal Heading</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               vehicula dapibus velit, at pretium felis eleifend ut. Morbi

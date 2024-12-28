@@ -113,12 +113,10 @@
 }
 
 @keyframes fade {
-
     0%,
     100% {
         opacity: 0;
     }
-
     33%,
     66% {
         opacity: 1;
@@ -173,18 +171,15 @@
         transform: translateX(-50%);
         text-shadow: -4px 6px 0 red, 4px -6px 0 blue;
     }
-
     60% {
         opacity: 0.5;
         transform: translateX(50%);
     }
-
     80% {
         transform: none;
         opacity: 1;
-        text-shadow: 4px -6px 0 red, -4px 6px 0 blue;
+        text-shadow: 4px -6px 0 red, -4 px 6px 0 blue;
     }
-
     100% {
         text-shadow: none;
     }
@@ -195,11 +190,9 @@
         text-shadow: -4px 6px 0 red, 4px -6px 0 blue;
         transform: translate(var(--glitch-translate));
     }
-
     5% {
         text-shadow: 4px -6px 0 red, -4px 6px 0 blue;
     }
-
     10%,
     100% {
         text-shadow: none;
@@ -211,7 +204,6 @@
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
@@ -221,21 +213,7 @@
     0% {
         opacity: 0;
     }
-
     100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fade {
-
-    0%,
-    100% {
-        opacity: 0;
-    }
-
-    33%,
-    66% {
         opacity: 1;
     }
 }
@@ -244,7 +222,6 @@
     0% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
@@ -266,13 +243,11 @@
         display: flex;
         align-self: center;
     }
-
     .hero-image img {
         padding-bottom: 30px;
         width: 220px;
         height: auto;
     }
-
     .top-right-image {
         display: none;
     }
@@ -288,47 +263,51 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .modal {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    width: 80%;
-    max-width: 500px;
-    box-shadow: 0px 4px 15px rgba(183, 158, 0, 0.2);
+}
+
+.modal {
+    background: url('/images/modal-bg.svg') no-repeat center center;
+    background-size: contain;
+    padding: 40px;
+    width: 600px;
+    height: 450px;
     animation: popIn 0.4s ease-out;
     z-index: 1000;
-  }
-  
-  @keyframes popIn {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@keyframes popIn {
     0% {
-      transform: scale(0.5);
-      opacity: 0;
+        transform: scale(0.5);
+        opacity: 0;
     }
     100% {
-      transform: scale(1);
-      opacity: 1;
+        transform: scale(1);
+        opacity: 1;
     }
-  }
-  
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-  
-  .close-button:hover {
+}
+
+.close-button:hover {
     color: red;
-  }
-  
-  .modal p {
+}
+
+.modal-heading {
+    color: gold;
+    text-align: center;
+    font-family: 'orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.modal p {
     margin: 0;
     font-size: 1rem;
     line-height: 1.5;
-    color: #333333;
-  }  
+    color: #fff;
+    text-align: center;
+}

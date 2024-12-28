@@ -1,9 +1,20 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleLogoClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="app">
-      <div className="logo-container">
+      <div className="logo-container" onClick={handleLogoClick}>
         <div className="rotating-circle">
           <img src="/images/inner-2.png" alt="Rotating Circle" />
         </div>
@@ -35,6 +46,23 @@ function App() {
           </div>
         </div>
       </div>
+
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <button className="close-button" onClick={closeModal}>
+              &times;
+            </button>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              vehicula dapibus velit, at pretium felis eleifend ut. Morbi
+              imperdiet, ligula non bibendum ultrices, purus eros tincidunt
+              neque, sed bibendum mi mi ac nisl. Cras in dui risus. Etiam
+              tincidunt eros vel urna vestibulum scelerisque.
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

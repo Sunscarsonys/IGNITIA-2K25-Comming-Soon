@@ -1,126 +1,66 @@
-.app {
-    height: 100vh;
+.app-container {
     width: 100%;
+    height: 100%;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #000000;
-    overflow: hidden;
+    position: relative;
 }
 
-.logo-container {
+.circle {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 120px;
-    height: 120px;
-    opacity: 0;
-    animation: revealText 1s ease-in-out forwards 2s;
-}
-
-.rotating-circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 120px;
-    height: 120px;
     animation: rotate 12s linear infinite;
 }
 
-.rotating-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.circle.top-left {
+    top: -260px;
+    left: -260px;
+    width: 620px;
+    height: 620px;
 }
 
-.inner-logo {
+.circle.bottom-right {
+    bottom: -380px;
+    right: -380px;
+    width: 900px;
+    height: 900px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logo {
     position: absolute;
-    top: 25%;
-    left: 25%;
-    width: 60px;
-    height: 60px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
-.inner-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.psit-logo {
+    max-width: 100px;
+    height: auto;
 }
 
-.top-right-image {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    height: 80px;
-    opacity: 0;
-    animation: revealText 3s ease-in-out forwards 2s;
-}
-
-.top-right-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.hero-section {
+    text-align: center;
+    z-index: 1;
 }
 
 .hero-image {
-    display: none;
-    position: absolute;
-    top: 30%;
-    transform: translateY(-50%);
-}
-
-.hero-image img {
-    width: 300px;
+    max-width: 420px;
     height: auto;
-    object-fit: contain;
-}
-
-.slideshow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-}
-
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    animation: fade 12s infinite;
-}
-
-.slide1 {
-    background-image: url("/images/slide-1.jpg");
-    animation-delay: 0s;
-}
-
-.slide2 {
-    background-image: url("/images/slide-2.jpg");
-    animation-delay: 4s;
-}
-
-.slide3 {
-    background-image: url("/images/slide-3.jpg");
-    animation-delay: 8s;
-}
-
-@keyframes fade {
-    0%,
-    100% {
-        opacity: 0;
-    }
-    33%,
-    66% {
-        opacity: 1;
-    }
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .glitch-text {
@@ -134,7 +74,7 @@
     font-weight: 600;
     letter-spacing: 5px;
     color: #dfdfdf;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
 }
@@ -171,15 +111,18 @@
         transform: translateX(-50%);
         text-shadow: -4px 6px 0 red, 4px -6px 0 blue;
     }
+
     60% {
         opacity: 0.5;
         transform: translateX(50%);
     }
+
     80% {
         transform: none;
         opacity: 1;
         text-shadow: 4px -6px 0 red, -4 px 6px 0 blue;
     }
+
     100% {
         text-shadow: none;
     }
@@ -190,9 +133,11 @@
         text-shadow: -4px 6px 0 red, 4px -6px 0 blue;
         transform: translate(var(--glitch-translate));
     }
+
     5% {
         text-shadow: 4px -6px 0 red, -4px 6px 0 blue;
     }
+
     10%,
     100% {
         text-shadow: none;
@@ -204,6 +149,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -213,101 +159,72 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
 
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
+@media (max-width: 1024px) {
+    .circle {
+        width: 250px;
+        height: 250px;
     }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.app::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 0;
 }
 
 @media (max-width: 768px) {
+
+    .circle.top-left {
+        top: -100px;
+        left: -100px;
+        width: 280px;
+        height: 280px;
+    }
+
+    .circle.bottom-right {
+        bottom: -120px;
+        right: -120px;
+        width: 380px;
+        height: 380px;
+    }
+
     .hero-image {
-        display: flex;
-        align-self: center;
+        max-width: 360px;
     }
-    .hero-image img {
-        padding-bottom: 30px;
-        width: 220px;
-        height: auto;
-    }
-    .top-right-image {
-        display: none;
-    }
-}
 
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal {
-    background: url('/images/modal-bg.svg') no-repeat center center;
-    background-size: contain;
-    padding: 40px;
-    width: 600px;
-    height: 450px;
-    animation: popIn 0.4s ease-out;
-    z-index: 1000;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-}
-
-@keyframes popIn {
-    0% {
-        transform: scale(0.5);
-        opacity: 0;
+    .psit-logo {
+        max-width: 90px;
     }
-    100% {
-        transform: scale(1);
-        opacity: 1;
+
+    .stack span {
+        font-size: 2rem;
     }
 }
 
-.close-button:hover {
-    color: red;
-}
+@media (max-width: 480px) {
+    .circle.top-left {
+        top: -100px;
+        left: -100px;
+        width: 280px;
+        height: 280px;
+    }
 
-.modal-heading {
-    color: gold;
-    text-align: center;
-    font-family: 'orbitron', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
+    .circle.bottom-right {
+        bottom: -120px;
+        right: -120px;
+        width: 400px;
+        height: 400px;
+    }
 
-.modal p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #fff;
-    text-align: center;
+    .hero-image {
+        max-width: 260px;
+    }
+
+    .psit-logo {
+        max-width: 70px;
+    }
+
+    .container {
+        font-size: 1rem;
+    }
 }

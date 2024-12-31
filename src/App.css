@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: fixed;
 }
 
 .circle {
@@ -19,13 +19,17 @@
     left: -260px;
     width: 620px;
     height: 620px;
+    opacity: 0;
+    animation: moveTopLeft 1s ease-out forwards, rotate 12s linear infinite 2s;
 }
 
 .circle.bottom-right {
     bottom: -380px;
     right: -380px;
-    width: 900px;
-    height: 900px;
+    width: 880px;
+    height: 880px;
+    opacity: 0;
+    animation: moveBottomRight 1s ease-out forwards 1s, rotate 12s linear infinite 3s;
 }
 
 @keyframes rotate {
@@ -35,6 +39,62 @@
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes moveTopLeft {
+    0% {
+        top: -640px;
+        left: -640px;
+        opacity: 0;
+    }
+
+    100% {
+        top: -240px;
+        left: -240px;
+        opacity: 1;
+    }
+}
+
+@keyframes moveBottomRight {
+    0% {
+        bottom: -940px;
+        right: -940px;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: -380px;
+        right: -380px;
+        opacity: 1;
+    }
+}
+
+@keyframes moveTopLeftNew {
+    0% {
+        top: -300px;
+        left: -300px;
+        opacity: 0;
+    }
+
+    100% {
+        top: -100px;
+        left: -100px;
+        opacity: 1;
+    }
+}
+
+@keyframes moveBottomRightNew {
+    0% {
+        bottom: -440px;
+        right: -440px;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: -120px;
+        right: -120px;
+        opacity: 1;
     }
 }
 
@@ -54,19 +114,20 @@
 .hero-section {
     text-align: center;
     z-index: 1;
+    opacity: 0;
+    animation: moveHeroImage 1s ease-out forwards 2s;
 }
 
 .hero-image {
-    max-width: 420px;
+    max-width: 360px;
     height: auto;
-    margin-top: 20px;
     margin-bottom: 30px;
 }
 
 .glitch-text {
     text-align: center;
     opacity: 0;
-    animation: revealText 4s ease-in-out forwards 2s;
+    animation: revealText 4s ease-in-out forwards 3s;
 }
 
 .container {
@@ -145,7 +206,7 @@
     }
 }
 
-@keyframes revealLogo {
+@keyframes revealText {
     0% {
         opacity: 0;
     }
@@ -155,12 +216,18 @@
     }
 }
 
-@keyframes revealText {
+@keyframes moveHeroImage {
     0% {
+        transform: translateY(1000px);
         opacity: 0;
     }
 
+    50% {
+        opacity: 0.25;
+    }
+
     100% {
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -179,6 +246,7 @@
         left: -100px;
         width: 280px;
         height: 280px;
+        animation: moveTopLeftNew 1s ease-out forwards, rotate 12s linear infinite 2s;
     }
 
     .circle.bottom-right {
@@ -186,6 +254,7 @@
         right: -120px;
         width: 380px;
         height: 380px;
+        animation: moveBottomRightNew 1s ease-out forwards 1s, rotate 12s linear infinite 3s;
     }
 
     .hero-image {
@@ -207,6 +276,7 @@
         left: -100px;
         width: 280px;
         height: 280px;
+        animation: moveTopLeftNew 1s ease-out forwards, rotate 12s linear infinite 2s;
     }
 
     .circle.bottom-right {
@@ -214,6 +284,7 @@
         right: -120px;
         width: 400px;
         height: 400px;
+        animation: moveBottomRightNew 1s ease-out forwards 1s, rotate 12s linear infinite 3s;
     }
 
     .hero-image {

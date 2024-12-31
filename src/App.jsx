@@ -20,7 +20,7 @@ function App() {
       </div>
 
       <div className="hero-section">
-        <img src="/images/ignitia.png" alt="Hero" className="hero-image" />
+        <img src="/images/ignitia-logo.png" alt="Hero" className="hero-image" />
       </div>
 
       <div className="glitch-text">

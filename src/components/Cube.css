@@ -104,7 +104,6 @@
   transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
 }
 
-/* Ring styles */
 .ring>.one {
   transform: translateZ(380px);
 }
@@ -151,4 +150,15 @@
 
 .ring>.twelve {
   transform: rotateY(330deg) translateZ(380px);
+}
+
+@media (max-width: 768px) {
+  #container {
+    transform: scale(0.8);
+  }
+
+  #shape {
+    height: 140px;
+    width: 140px;
+  }
 }

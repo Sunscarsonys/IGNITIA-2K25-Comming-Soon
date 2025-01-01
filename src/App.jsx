@@ -4,13 +4,13 @@ function App() {
   return (
     <div className="app-container">
       <img
-        src="/images/circle.png"
+        src="/images/circle3.png"
         alt="Rotating Circle"
         className="circle top-left"
       />
 
       <img
-        src="/images/circle.png"
+        src="/images/circle3.png"
         alt="Rotating Circle"
         className="circle bottom-right"
       />

@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Cube.css";
 
 const CubeComponent = () => {
-  const [isRing, setIsRing] = useState(false);
+  const [hoverCount, setHoverCount] = useState(0);
 
   const toggleShape = () => {
-    setIsRing(!isRing);
+    setHoverCount((prevCount) => prevCount + 1);
   };
-
-  useEffect(() => {
-    const interval = setInterval(toggleShape, 2000);
-    return () => clearInterval(interval);
-  }, []);
+  const isRing = hoverCount % 2 === 1;
 
   return (
     <div id="container">
       <div id="stage" style={{ transform: isRing ? "translateZ(-200px)" : "" }}>
-        <div id="shape" className={`${isRing ? "ring" : "cube"} backfaces`}>
+        <div
+          id="shape"
+          className={`${isRing ? "ring" : "cube"} backfaces`}
+          onMouseEnter={toggleShape}
+        >
           <div className="plane one"></div>
           <div className="plane two"></div>
           <div className="plane three"></div>

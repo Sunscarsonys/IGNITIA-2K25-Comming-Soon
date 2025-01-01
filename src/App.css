@@ -380,6 +380,13 @@
     .open-modal-btn {
         font-size: 14px;
     }
+
+    .modal-content {
+        background: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -413,5 +420,12 @@
 
     .open-modal-btn {
         font-size: 14px;
+    }
+
+    .modal-content {
+        background: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
     }
 }

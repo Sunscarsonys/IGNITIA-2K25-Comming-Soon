@@ -6,7 +6,17 @@
 }
 
 body {
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(8, 8, 8);
+  background-image: -webkit-gradient(
+    radial,
+    50% 400,
+    1,
+    50% 600,
+    600,
+    from(rgba(163, 119, 0, 0.188)),
+    to(rgba(196, 196, 196, 0))
+  );
+  background-repeat: no-repeat;
   overflow: hidden;
   margin: 0;
   padding: 0;

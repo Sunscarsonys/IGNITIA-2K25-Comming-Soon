@@ -166,81 +166,13 @@
     --glitch-translate: -12px;
 }
 
-@media (max-width: 1024px) {
-    .circle {
-        width: 250px;
-        height: 250px;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .circle.top-left {
-        top: -100px;
-        left: -100px;
-        width: 240px;
-        height: 240px;
-        animation: moveTopLeftNew 1s ease-out forwards, rotate 12s linear infinite 2s;
-    }
-
-    .circle.bottom-right {
-        bottom: -120px;
-        right: -120px;
-        width: 360px;
-        height: 360px;
-        animation: moveBottomRightNew 1s ease-out forwards 1s, rotate 12s linear infinite 3s;
-    }
-
-    .hero-image {
-        max-width: 320px;
-    }
-
-    .psit-logo {
-        max-width: 80px;
-    }
-
-    .stack span {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .circle.top-left {
-        top: -100px;
-        left: -100px;
-        width: 240px;
-        height: 240px;
-        animation: moveTopLeftNew 1s ease-out forwards, rotate 12s linear infinite 2s;
-    }
-
-    .circle.bottom-right {
-        bottom: -120px;
-        right: -120px;
-        width: 360px;
-        height: 360px;
-        animation: moveBottomRightNew 1s ease-out forwards 1s, rotate 12s linear infinite 3s;
-    }
-
-    .hero-image {
-        max-width: 240px;
-    }
-
-    .psit-logo {
-        max-width: 60px;
-    }
-
-    .container {
-        font-size: 1rem;
-    }
-}
-
 .open-modal-btn {
     margin-top: 30px;
     background: linear-gradient(90deg, rgba(209, 154, 8, 0.95) 0%, rgba(254, 219, 126, 0.95) 46.26%, rgba(209, 154, 8, 0.66) 100%);
     color: rgb(0, 0, 0);
     padding: 14px 30px;
     border: none;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 550;
     opacity: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -405,5 +337,81 @@
     100% {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .circle {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .circle.top-left {
+        top: -100px;
+        left: -100px;
+        width: 240px;
+        height: 240px;
+        animation: moveTopLeftNew 1s ease-out forwards, rotate 12s linear infinite 2s;
+    }
+
+    .circle.bottom-right {
+        bottom: -120px;
+        right: -120px;
+        width: 360px;
+        height: 360px;
+        animation: moveBottomRightNew 1s ease-out forwards 1s, rotate 12s linear infinite 3s;
+    }
+
+    .hero-image {
+        max-width: 320px;
+    }
+
+    .psit-logo {
+        max-width: 80px;
+    }
+
+    .stack span {
+        font-size: 2rem;
+    }
+
+    .open-modal-btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .circle.top-left {
+        top: -100px;
+        left: -100px;
+        width: 240px;
+        height: 240px;
+        animation: moveTopLeftNew 1s ease-out forwards, rotate 12s linear infinite 2s;
+    }
+
+    .circle.bottom-right {
+        bottom: -120px;
+        right: -120px;
+        width: 360px;
+        height: 360px;
+        animation: moveBottomRightNew 1s ease-out forwards 1s, rotate 12s linear infinite 3s;
+    }
+
+    .hero-image {
+        max-width: 240px;
+    }
+
+    .psit-logo {
+        max-width: 60px;
+    }
+
+    .container {
+        font-size: 1rem;
+    }
+
+    .open-modal-btn {
+        font-size: 14px;
     }
 }

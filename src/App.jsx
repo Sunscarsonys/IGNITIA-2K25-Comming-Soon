@@ -60,6 +60,10 @@ function App() {
       {isModalOpen && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-btn" onClick={closeModal}>
+              &times;
+            </button>
+
             <CubeComponent />
           </div>
         </div>

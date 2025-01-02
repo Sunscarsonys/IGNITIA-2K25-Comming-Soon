@@ -36,12 +36,13 @@
   position: absolute;
   height: 200px;
   width: 200px;
-  border: 1px solid white;
+  border: 1px solid rgba(254, 219, 126, 0.95);
   border-radius: 12px;
   box-sizing: border-box;
   text-align: center;
   color: black;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-size: cover;
+  background-position: center;
   transition: transform 2s, opacity 2s;
   backface-visibility: hidden;
 }
@@ -51,105 +52,129 @@
 }
 
 .cube>.one {
-  opacity: 0.8;
+  opacity: 0.9;
   transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(100px);
+  background-image: url('/images/1.jpg');
 }
 
 .cube>.two {
-  opacity: 0.8;
+  opacity: 0.9;
   transform: scale3d(1.2, 1.2, 1.2) translateZ(100px);
+  background-image: url('/images/2.jpg');
 }
 
 .cube>.three {
-  opacity: 0.8;
+  opacity: 0.9;
   transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
+  background-image: url('/images/3.jpg');
 }
 
 .cube>.four {
-  opacity: 0.8;
+  opacity: 0.9;
   transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
+  background-image: url('/images/4.jpg');
 }
 
 .cube>.five {
-  opacity: 0.8;
+  opacity: 0.9;
   transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
+  background-image: url('/images/5.jpg');
 }
 
 .cube>.six {
-  opacity: 0.8;
+  opacity: 0.9;
   transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
+  background-image: url('/images/6.jpg');
 }
 
 .cube>.seven {
   transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
+  background-image: url('/images/7.jpg');
 }
 
 .cube>.eight {
   transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
+  background-image: url('/images/8.jpg');
 }
 
 .cube>.nine {
   transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
+  background-image: url('/images/9.jpg');
 }
 
 .cube>.ten {
   transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
+  background-image: url('/images/10.jpg');
 }
 
 .cube>.eleven {
   transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
+  background-image: url('/images/11.jpg');
 }
 
 .cube>.twelve {
   transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
+  background-image: url('/images/12.jpg');
 }
 
 .ring>.one {
   transform: translateZ(380px);
+  background-image: url('/images/1.jpg');
 }
 
 .ring>.two {
   transform: rotateY(30deg) translateZ(380px);
+  background-image: url('/images/2.jpg');
 }
 
 .ring>.three {
   transform: rotateY(60deg) translateZ(380px);
+  background-image: url('/images/3.jpg');
 }
 
 .ring>.four {
   transform: rotateY(90deg) translateZ(380px);
+  background-image: url('/images/4.jpg');
 }
 
 .ring>.five {
   transform: rotateY(120deg) translateZ(380px);
+  background-image: url('/images/5.jpg');
 }
 
 .ring>.six {
   transform: rotateY(150deg) translateZ(380px);
+  background-image: url('/images/6.jpg');
 }
 
 .ring>.seven {
   transform: rotateY(180deg) translateZ(380px);
+  background-image: url('/images/7.jpg');
 }
 
 .ring>.eight {
   transform: rotateY(210deg) translateZ(380px);
+  background-image: url('/images/8.jpg');
 }
 
 .ring>.nine {
   transform: rotateY(-120deg) translateZ(380px);
+  background-image: url('/images/9.jpg');
 }
 
 .ring>.ten {
   transform: rotateY(-90deg) translateZ(380px);
+  background-image: url('/images/10.jpg');
 }
 
 .ring>.eleven {
   transform: rotateY(300deg) translateZ(380px);
+  background-image: url('/images/11.jpg');
 }
 
 .ring>.twelve {
   transform: rotateY(330deg) translateZ(380px);
+  background-image: url('/images/12.jpg');
 }
 
 @media (max-width: 768px) {

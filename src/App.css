@@ -237,7 +237,96 @@
     color: red;
 }
 
+.Btn {
+    width: 160px;
+    height: 54px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(to right,
+            #77530a,
+            #ffd277,
+            #77530a,
+            #77530a,
+            #ffd277,
+            #77530a);
+    background-size: 250%;
+    background-position: left;
+    color: #ffd277;
+    position: absolute;
+    margin-top: 20px;
+    transform: translateX(-50%) scale(0);
+    /* Scale down and center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 1s;
+    overflow: hidden;
+    animation: scaleReveal 1s ease-out forwards 4s;
+}
 
+.Btn::before {
+    position: absolute;
+    content: "EXPLORE MORE";
+    color: #ffd277;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 50px;
+    transition-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.842);
+    background-size: 200%;
+}
+
+.Btn:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+.Btn:hover::before {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+.Btn:active {
+    transform: scale(0.95);
+}
+
+@keyframes scaleReveal {
+    0% {
+        transform: translateX(-50%) scale(0.5);
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .Btn {
+        width: 200px;
+        height: 55px;
+        margin-bottom: 200px;
+    }
+
+    .Btn::before {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Btn {
+        width: 140px;
+        height: 50px;
+        margin-bottom: 250px;
+    }
+
+    .Btn::before {
+        font-size: 12px;
+    }
+}
 
 @keyframes fadeIn {
     to {

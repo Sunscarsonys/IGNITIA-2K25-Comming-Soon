@@ -51,7 +51,7 @@ function App() {
         </div>
 
         <div className="button-container">
-          <button className="open-modal-btn" onClick={openModal}>
+          <button className="Btn" onClick={openModal}>
             Explore More
           </button>
         </div>

@@ -9,6 +9,17 @@
     position: fixed;
 }
 
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    text-align: center;
+    margin-top: -30px;
+  }
+  
+
 .circle {
     position: absolute;
     animation: rotate 12s linear infinite;
@@ -253,7 +264,7 @@
     background-position: left;
     color: #ffd277;
     position: absolute;
-    margin-top: 20px;
+    margin-top: 10px;
     transform: translateX(-50%) scale(0);
     display: flex;
     align-items: center;

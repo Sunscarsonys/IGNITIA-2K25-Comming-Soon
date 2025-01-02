@@ -32,29 +32,32 @@ function App() {
           <img src="/images/psit.png" alt="PSIT Logo" className="psit-logo" />
         </div>
 
-        <div className="hero-section">
-          <img
-            src="/images/ignitia-logo.png"
-            alt="Hero"
-            className="hero-image"
-          />
-        </div>
+        <div className="centered-content">
+          <div className="hero-section">
+            <img
+              src="/images/ignitia-logo.png"
+              alt="Hero"
+              className="hero-image"
+            />
+          </div>
 
-        <div className="glitch-text">
-          <div className="container">
-            <div className="stack" style={{ "--stacks": 3 }}>
-              <span style={{ "--index": 0 }}>COMING SOON</span>
-              <span style={{ "--index": 1 }}>COMING SOON</span>
-              <span style={{ "--index": 2 }}>COMING SOON</span>
+          <div className="glitch-text">
+            <div className="container">
+              <div className="stack" style={{ "--stacks": 3 }}>
+                <span style={{ "--index": 0 }}>COMING SOON</span>
+                <span style={{ "--index": 1 }}>COMING SOON</span>
+                <span style={{ "--index": 2 }}>COMING SOON</span>
+              </div>
             </div>
+          </div>
+
+          <div className="button-container">
+            <button className="Btn" onClick={openModal}>
+              Explore More
+            </button>
           </div>
         </div>
 
-        <div className="button-container">
-          <button className="Btn" onClick={openModal}>
-            Explore More
-          </button>
-        </div>
       </div>
 
       {isModalOpen && (
